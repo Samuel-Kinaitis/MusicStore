@@ -13,7 +13,7 @@ namespace MusicStore.Migrations
                 columns: table => new
                 {
                     OrderID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:MusicIdentity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Line1 = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Line2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -34,7 +34,7 @@ namespace MusicStore.Migrations
                 columns: table => new
                 {
                     CartLineID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:MusicIdentity", "1, 1"),
                     ProductID = table.Column<long>(type: "bigint", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     OrderID = table.Column<int>(type: "int", nullable: true)
